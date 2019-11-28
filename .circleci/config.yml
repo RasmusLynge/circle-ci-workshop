@@ -23,11 +23,11 @@ jobs:
           path: .
           destination: prefix
 
-  workflows:
-    version: 2
-    two_job_flow:
-      jobs:
-        - test
-        - package-job:
-            requires:
-              - test
+workflows:
+  version: 2
+  two_job_flow:
+    jobs:
+      - test
+      - package-job:
+          requires:
+            - test
