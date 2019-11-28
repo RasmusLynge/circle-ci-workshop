@@ -7,7 +7,9 @@ jobs:
       - checkout
       - run:
           name: run gradle
-          command: gradle test
+          command: |
+            gradle test
+            gradle jar
       - store_test_results:
           path: build/test-results
       - store_artifacts:
